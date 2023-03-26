@@ -172,23 +172,18 @@ nav ul li {
 
 .project-pic {
     width: 65%;
-    height: 60%;
+    height: 50%;
 }
 
 .projects-container {
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding: 1rem;
 }
 
 .projects-title {
     text-align: center;
     margin-bottom: 1rem;
-}
-
-.projects-container {
-    text-align: center;
-    width: 21.875rem;
-    padding: 1rem;
 }
 
 .projects-container p {
