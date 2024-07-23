@@ -342,9 +342,10 @@ footer {
         margin-top: -4rem;
         flex-direction: column;
         gap: 0;
+        align-items: center;
     }
 
-    .hero img {
+    /*.hero img {
         height: 20rem;
         width: 30rem;
     }
@@ -352,6 +353,17 @@ footer {
     .bio {
         margin-top: -7rem;
         width: 20.5rem;
+    }*/
+
+    .hero img {
+        height: auto; /* Adjust to maintain aspect ratio */
+        width: 80%; /* Adjust to a percentage to fit within the screen */
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+
+    .bio {
+        margin-top: 1rem; /* Adjust margin as needed */
+        width: 90%; /* Adjust to a percentage to fit within the screen */
     }
 
     .more-about {
@@ -386,7 +398,7 @@ footer {
 }
 
 @media screen and (max-width: 420px) {
-    .hero img {
+    /*.hero img {
         height: 20rem;
         width: 23rem;
     }
@@ -401,5 +413,22 @@ footer {
 
     .contact-form-container {
         max-width: 17.75rem;
+    }*/
+    .hero img {
+        height: auto;
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .bio {
+        width: 90%;
+    }
+
+    .project-container {
+        width: 90%;
+    }
+
+    .contact-form-container {
+        max-width: 90%;
     }
 }
