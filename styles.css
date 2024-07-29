@@ -171,14 +171,23 @@ nav ul li {
 }
 
 .project-pic {
-    width: 65%;
-    height: 50%;
+    /*width: 65%;
+    height: 50%;*/
+    width: 75%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't overflow */
 }
 
 .projects-container {
-    display: flex;
+    /*display: flex;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem;*/
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 1rem;
+    justify-content: center; /* Center align items */
+    align-items: center; /* Center items vertically */
+    text-align: center;
 }
 
 .projects-title {
@@ -196,6 +205,9 @@ nav ul li {
 
 .project-details {
     margin-bottom: var(--bottom-margin);
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Adds "..." if text overflows */
+    white-space: normal; /* Ensure text wraps properly */
 }
 
 .project-card {
@@ -204,6 +216,10 @@ nav ul li {
     box-shadow: 0 3px 10px var(--primary-shadow);
     padding: 20px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text and images */
+    text-align: center; /* Center text */
 }
 
 .contact {
@@ -316,6 +332,7 @@ footer {
         text-align: center;
         transform: translateX(120%);
         transition: transform 0.5s ease-in;
+        display: none;
     }
     
     nav ul li {
@@ -328,14 +345,7 @@ footer {
 
     nav ul.show {
         transform: translateX(0);
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
-    nav ul.show {
-        transform: translateX(0);
+        display: flex;
     }
 
     .hero {
@@ -386,14 +396,18 @@ footer {
 
     .projects-container {
         flex-direction: column;
-    }
-
-    .projects-container {
         width: 20.875rem;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .contact-form-container {
         max-width: 23.75rem;
+    }
+
+    .project-card {
+        flex: 1 1 calc(50% - 2rem); /* Adjust to 2 cards per row */
     }
 }
 
@@ -430,5 +444,9 @@ footer {
 
     .contact-form-container {
         max-width: 90%;
+    }
+
+    .project-card {
+        flex: 1 1 calc(100% - 2rem); /* Full width for small screens */
     }
 }
